@@ -1,0 +1,87 @@
+html ,  body{
+	width: 100%;
+	height:100%;
+}
+
+@keyframes spin{
+	from{ transform: rotate(0); }
+	to{ transform:rotate(360deg); }
+}
+
+@keyframes twinkle{
+	from{ opacity: 1; }
+	to{ opacity: 0.2; }
+}
+
+@keyframes sunFire{
+	from{ box-shadow: 0 0 150px #f5c91a; }
+	to{ box-shadow: 0 0 50px #f5c91a; }
+}
+
+#universe{
+	background: #000;
+	background: radial-gradient(#555,#000);
+	overflow:hidden;
+}
+
+#stars{
+	background: url(images/stars.png);
+	height: 100%;
+	width: 100%;
+	animation:twinkle 3s infinite alternate;
+}
+
+#sun{
+	width: 200px;
+	height: 200px;
+	background: orange;
+	background: radial-gradient(#f5c313 , #ec7e08);
+	border-radius: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -100px;
+	margin-left: -100px;
+	box-shadow: 0 0 50px #f5c91a;
+	animation:sunFire 3s infinite alternate;   
+}
+
+#earthOrbit{
+	width: 500px;
+	height: 600px;
+	/* border: solid 1px red; */
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -250px;
+	margin-top: -300px;
+	animation:spin 30s linear infinite;   
+}
+
+#earth{
+	position: absolute;
+	top: 50%;
+	margin-top: -40px;
+	animation:spin 3s linear infinite;   
+}
+
+#moonOrbit{
+	width: 120px;
+	height: 120px;
+	/*border: solid 1px red;*/
+	position: absolute;
+	top: 50%;
+	left: -20px;
+	margin-top: -60px;
+	border-radius: 100%;
+	animation:spin 2s linear infinite;   
+}
+
+#moon{
+	width: 20px;
+	height: 20px;
+	background: gray;
+	background: radial-gradient(#ddd , #888);
+	border-radius: 100%;
+}
